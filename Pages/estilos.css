@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #1e1e2f;
+  --cor-secundaria: #fca311;
+  --cor-clara: #ffffff;
+  --cor-escura: #121212;
+  --cor-cinza: #e0e0e0;
+  --fonte-principal: "Poppins", sans-serif;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--cor-primaria);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cor-clara);
+  font-family: var(--fonte-principal);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: var(--cor-clara);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-family: var(--fonte-principal);
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--cor-secundaria);
+}
+
+nav a:focus {
+  outline: 2px solid var(--cor-secundaria);
+  outline-offset: 4px;
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.menu-hamburguer {
+  display: none; /* Inicialmente, o menu hamburguer estará oculto */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-hamburguer .linha {
+  width: 30px;
+  height: 4px;
+  background-color: var(--cor-clara);
+  border-radius: 5px;
+}
+
+/* Estilos para o menu de navegação em telas menores */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Esconde o menu de navegação em telas pequenas */
+  }
+
+  /* Torna o menu hamburguer visível */
+  .menu-hamburguer {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* Esconde o menu de navegação */
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 60px; /* Ajuste para que o menu não sobreponha a logo */
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    color: var(--cor-clara);
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Exibe o menu quando a classe 'active' for adicionada */
+  }
+}
+
+.secao-home {
+  padding: 4rem 2rem;
+  background-color: var(--cor-escura);
+  color: var(--cor-clara);
+}
+
+.conteudo-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.texto-home {
+  flex: 1;
+}
+
+.texto-home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.texto-home p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-destaque {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-escura);
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-destaque:hover {
+  background-color: #ffb733;
+}
+
+.imagem-home {
+  flex: 1;
+  text-align: center;
+}
+
+.imagem-home img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .conteudo-home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-home h1 {
+    font-size: 2rem;
+  }
+
+  .texto-home p {
+    font-size: 1rem;
+  }
+
+  .btn-destaque {
+    margin: auto;
+  }
+}
