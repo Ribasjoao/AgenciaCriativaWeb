@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilos.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Agência Criativa Web</title>
   </head>
   <body>
@@ -43,10 +47,112 @@
         </div>
       </div>
     </section>
-    <section id="sobre"></section>
-    <section id="servicos"></section>
-    <section id="depoimentos"></section>
-    <section id="contato"></section>
+    <section class="secao-sobre" id="sobre">
+      <div class="grid-sobre">
+        <div class="imagem-sobre">
+          <img
+            src="https://avatars.githubusercontent.com/u/93440646?v=4"
+            alt="Foto Perfil"
+          />
+        </div>
+        <div class="texto-sobre">
+          <h2>Sobre Nós</h2>
+          <p>
+            Somos apaixonados por tecnologia e inovação. Nosso objetivo é
+            oferecer experiências digitais de alta qualidade para nossos
+            usuários.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="secao-servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="grid-servicos">
+        <div class="card-servico">
+          <i class="fas fa-paint-brush fa-3x"></i>
+          <h3>Web Design</h3>
+          <p>
+            Criação de sites modernos, responsivos e com foco na experiência do
+            usuário.
+          </p>
+        </div>
+        <div class="card-servico">
+          <i class="fas fa-search fa-3x"></i>
+          <h3>Redes e Infraestrutura</h3>
+          <p>Planejamento e implementação de redes seguras e eficientes.</p>
+        </div>
+        <div class="card-servico">
+          <i class="fas fa-laptop-code fa-3x"></i>
+          <h3>Suporte Técnico</h3>
+          <p>
+            Atendimento especializado para garantir o funcionamento contínuo de
+            sistemas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="secao-depoimentos">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="grid-depoimentos">
+        <div class="card-depoimento">
+          <i class="fas fa-quote-left fa-3x"></i>
+          <!-- Ícone de aspas -->
+          <p>
+            "A Agência Criativa Web transformou nosso site em algo muito mais
+            profissional e intuitivo!"
+          </p>
+          <h3>João Silva</h3>
+          <p>CEO da Empresa XYZ</p>
+        </div>
+        <div class="card-depoimento">
+          <i class="fas fa-quote-left fa-3x"></i>
+          <!-- Ícone de aspas -->
+          <p>
+            "A equipe é extremamente dedicada e entregou nosso projeto no prazo
+            com qualidade incrível!"
+          </p>
+          <h3>Maria Oliveira</h3>
+          <p>Fundadora da Startup ABC</p>
+        </div>
+        <div class="card-depoimento">
+          <i class="fas fa-quote-left fa-3x"></i>
+          <!-- Ícone de aspas -->
+          <p>
+            "Muito satisfeitos com o design do site. A comunicação foi sempre
+            muito clara e eficiente."
+          </p>
+          <h3>Carlos Pereira</h3>
+          <p>Gerente de Marketing da Empresa DEF</p>
+        </div>
+      </div>
+    </section>
+    <section id="contato" class="secao-contato">
+      <h2>Entre em contato</h2>
+      <div class="formulario-contato">
+        <form action="#" method="post">
+          <div class="campo-contato">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="campo-contato">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="campo-contato">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

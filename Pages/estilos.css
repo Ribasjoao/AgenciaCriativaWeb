@@ -171,3 +171,210 @@ nav a:focus {
     margin: auto;
   }
 }
+
+.secao-sobre {
+  padding: 4rem 2rem;
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+  font-family: var(--fonte-principal);
+}
+
+.grid-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.texto-sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.texto-sobre p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .grid-sobre {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .texto-sobre h2 {
+    font-size: 1.7rem;
+  }
+
+  .texto-sobre p {
+    font-size: 1rem;
+  }
+}
+
+.secao-servicos {
+  padding: 4rem 2rem;
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+  text-align: center;
+  font-family: var(--fonte-principal);
+}
+
+.secao-servicos h2 {
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 2rem;
+}
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card-servico {
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-servico h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+}
+
+.card-servico p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-servico i {
+  color: var(--cor-secundaria); /* Cor do ícone */
+  margin-bottom: 1rem; /* Espaço entre ícone e título */
+}
+
+@media (max-width: 1024px) {
+  .grid-servicos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-servicos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secao-depoimentos {
+  padding: 3rem 2rem;
+  background-color: var(--cor-clara);
+  text-align: center;
+  font-family: var(--fonte-principal);
+}
+.secao-depoimentos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--cor-primaria);
+}
+.grid-depoimentos {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card-depoimento {
+  background-color: var(--cor-cinza);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  min-width: 250px;
+  text-align: center;
+}
+
+.card-depoimento h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--cor-secundaria);
+}
+
+.card-depoimento p {
+  font-size: 1rem;
+  color: var(--cor-escura);
+}
+
+.card-depoimento i {
+  color: var(--cor-secundaria);
+}
+
+@media (max-width: 768px) {
+  .grid-depoimentos {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-depoimento {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .formulario-contato {
+    padding: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .secao-depoimentos h2,
+  .secao-contato h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Para telas médias, como tablets */
+@media (max-width: 1024px) {
+  .grid-depoimentos {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-depoimento {
+    width: 48%; /* Garantindo que dois cards caibam na linha */
+  }
+
+  .secao-depoimentos h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Para telas grandes, como desktops */
+@media (min-width: 1025px) {
+  .secao-depoimentos h2 {
+    font-size: 2rem;
+  }
+
+  .card-depoimento {
+    width: 30%;
+  }
+}
