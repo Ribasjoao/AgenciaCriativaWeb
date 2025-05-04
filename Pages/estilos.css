@@ -352,7 +352,6 @@ nav a:focus {
   }
 }
 
-/* Para telas médias, como tablets */
 @media (max-width: 1024px) {
   .grid-depoimentos {
     flex-direction: row;
@@ -368,7 +367,6 @@ nav a:focus {
   }
 }
 
-/* Para telas grandes, como desktops */
 @media (min-width: 1025px) {
   .secao-depoimentos h2 {
     font-size: 2rem;
@@ -376,5 +374,84 @@ nav a:focus {
 
   .card-depoimento {
     width: 30%;
+  }
+}
+
+.secao-contato {
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.secao-contato h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-family: var(--fonte-principal);
+  color: var(--cor-secundaria);
+}
+
+.formulario-contato {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cor-cinza);
+  font-family: var(--fonte-principal);
+  resize: vertical;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  outline: 2px solid var(--cor-secundaria);
+}
+
+.formulario-contato button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-clara);
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--fonte-principal);
+}
+
+.formulario-contato button:hover {
+  background-color: #ff9900;
+}
+
+@media (max-width: 768px) {
+  .secao-contato {
+    padding: 3rem 1rem;
+  }
+
+  .secao-contato h2 {
+    font-size: 1.6rem;
+  }
+  .formulario-contato {
+    gap: 1rem;
+  }
+
+  .formulario-contato input,
+  .formulario-contato textarea {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+
+  .formulario-contato button {
+    font-size: 1rem;
+    padding: 0.9rem;
   }
 }
